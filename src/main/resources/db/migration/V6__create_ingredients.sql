@@ -1,0 +1,5 @@
+CREATE TABLE ingredients (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    plate_id INT NOT NULL,
+    name VARCHAR
+);

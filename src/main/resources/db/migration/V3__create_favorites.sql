@@ -1,0 +1,5 @@
+CREATE TABLE favorites (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INT NOT NULL,
+    plate_id INT NOT NULL
+);

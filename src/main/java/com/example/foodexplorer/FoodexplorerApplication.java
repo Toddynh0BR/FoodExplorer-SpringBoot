@@ -14,9 +14,9 @@ public class FoodexplorerApplication {
 
 		Environment env = context.getEnvironment();
 
-        String port = env.getProperty("server.port", "8080");
+        String PORT = env.getProperty("server.port", "8080");
 
-		System.out.println("Servidor rodando na porta: " + port);
+		System.out.println("Servidor rodando na porta: " + PORT);
 	}
 
 }
