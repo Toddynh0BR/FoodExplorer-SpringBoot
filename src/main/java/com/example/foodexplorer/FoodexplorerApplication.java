@@ -1,16 +1,15 @@
 package com.example.foodexplorer;
 
-import org.springframework.core.env.Environment;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.core.env.Environment;
 
 @SpringBootApplication
 public class FoodexplorerApplication {
-
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context =
-		     SpringApplication.run(FoodexplorerApplication.class, args);
+		    SpringApplication.run(FoodexplorerApplication.class, args);
 
 		Environment env = context.getEnvironment();
 
@@ -18,5 +17,4 @@ public class FoodexplorerApplication {
 
 		System.out.println("Servidor rodando na porta: " + PORT);
 	}
-
 }
