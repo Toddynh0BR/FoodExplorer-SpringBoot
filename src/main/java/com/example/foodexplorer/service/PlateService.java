@@ -1,8 +1,5 @@
 package com.example.foodexplorer.service;
 
-import java.time.LocalDateTime;
-
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.foodexplorer.entity.Plate;
@@ -10,16 +7,18 @@ import com.example.foodexplorer.repository.PlateRepository;
 import com.example.foodexplorer.exception.AppException;
 
 @Service
-public class PlateServicervice {
+public class PlateService {
     private final PlateRepository plateRepository;
-    public PlateServicervice(PlateRepository plateRepository) {
+    public PlateService(PlateRepository plateRepository) {
         this.plateRepository = plateRepository;
     }
 
     public Plate createPlate(Plate plate) {
 
-
-     
+        plate.setName(plate.getName());
+        plate.setPrice(plate.getPrice());
+        plate.setCategory(plate.getCategory());
+        plate.setDescription(plate.getDescription());
 
         return plateRepository.save(plate);
     };
@@ -34,8 +33,6 @@ public class PlateServicervice {
      //atualizar dados somente se foram enviados
      if (plateData.getName() != null) plate.setName(plateData.getName());
      
-     plate.setUpdatedAt(now);//atualziar data de atualização
-
      return plateRepository.save(plate);//retornar plate salvo
     };
 
